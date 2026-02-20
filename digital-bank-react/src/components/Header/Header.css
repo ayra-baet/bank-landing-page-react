@@ -1,0 +1,51 @@
+.nav__logo {
+    width: 9.625rem;
+    height: 1.375rem;
+}
+
+.nav__links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav__links li a {
+    color: var(--gray-600);
+    font-size: 0.875rem;
+    font-weight: var(--medium-400);
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav__links li a:hover {
+    color: var(--blue-950)
+}
+
+.nav__links li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    height: 5px;
+    background: var(--gradient-bg);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav__links li a:hover::before {
+    opacity: 1;
+}
+
+.nav__btn {
+    padding: 0.875rem 2.1875rem;
+    border: none;
+    border-radius: 50px;
+    background: var(--gradient-bg);
+    color: var(--white);
+    font-weight: var(--bold-700);
+    cursor: pointer;
+}
+
+.nav__btn:hover {
+    opacity: 0.75;
+}

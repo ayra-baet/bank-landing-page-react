@@ -1,0 +1,25 @@
+:root {
+    /* COLORS */
+    /* PRIMARY */
+    --blue-950: hsl(233, 26%, 24%);
+    --green-500: hsl(136, 64%, 51%);
+    --cyan-400: hsl(192, 69%, 51%);
+
+    /* NEUTRAL */
+    --gray-600: hsl(233, 8%, 62%);
+    --gray-100: hsl(220, 16%, 96%);
+    --gray-50: hsl(0, 0%, 98%);
+    --white: hsl(0, 100%, 100%);
+
+    /* GRADIENT */
+    --gradient-bg: linear-gradient(to bottom left, var(--green-500), var(--cyan-400));
+
+    /* FONT WEIGHT */
+    --normal-300: 300;
+    --medium-400: 400;
+    --bold-700: 700;
+
+    /* Z-INDEX */
+    --header-200: 200;
+    --menu-100: 100;
+}
