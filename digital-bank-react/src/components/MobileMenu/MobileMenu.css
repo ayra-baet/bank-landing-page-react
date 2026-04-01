@@ -2,6 +2,7 @@
     position: absolute;
     width: calc(100% - 3rem);
     left: 50%;
+    transform: translate(-50%, -20%);
     margin-top: 1.5rem;
     padding: 1.625rem;
     background-color: var(--white);
