@@ -1,0 +1,15 @@
+.button {
+    display: inline-block;
+    position: relative;
+    padding: 0.875rem 2.1875rem;
+    border: none;
+    border-radius: 50px;
+    background: var(--gradient-bg);
+    color: var(--white);
+    font-weight: var(--bold-700);
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.75;
+}
