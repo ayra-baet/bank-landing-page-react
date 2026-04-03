@@ -3,6 +3,7 @@ import { useState } from "react";
 import Backdrop from "../Backdrop/Backdrop";
 import MenuToggle from "./MenuToggle";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import Button from "../Button/index";
 
 import logoDark from "../../assets/images/logo-dark.svg";
 
@@ -16,7 +17,7 @@ function Header() {
     return(
         <>
             <header className="header">
-                <nav className="nav">
+                <nav className="container nav flex-between">
                     {/* logo */}
                     <a 
                         href="/"
@@ -45,11 +46,7 @@ function Header() {
                     </ul>
 
                     {/* call-to-action button */}
-                    <button
-                        className="nav__btn"
-                    >
-                        Request Invite
-                    </button>
+                    <Button variant="header"/>
                 </nav>
             </header>
 
