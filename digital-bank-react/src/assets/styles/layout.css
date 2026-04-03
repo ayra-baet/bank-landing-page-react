@@ -1,37 +1,10 @@
- nav {
-    padding: 1.0625rem 1.5rem;
+.container {
+    max-width: 69rem;
+    margin: 0 auto;
+}
+
+.flex-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-/* Mobile + Tablet Default */
-ul.nav__links {
-    display: none;
-}
-
-.nav__btn {
-    display: none;
-}
-
-.nav__links {
-  display: flex;
-  gap: 1rem;
-}
-
-/* Desktop screens */
-@media (min-width: 1024px) {
-    /* Hide hamburger toggle */
-    .toggle {
-        display: none;
-    }
-
-    /* Show navigation links and CTA button */
-    ul.nav__links {
-        display: flex;
-    }
-
-    .nav__btn {
-        display: block;
-    }
 }
