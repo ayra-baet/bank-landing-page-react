@@ -1,3 +1,4 @@
+/* Base styles */
 .toggle {
     border: none;
     background: none;
@@ -37,4 +38,11 @@
 .toggle--open span:nth-child(3) {
     transform: rotate(-45deg) translate(3px, -3px);
     background-color: var(--blue-950);
+}
+
+/* Laptop / Small Desktop and up */
+@media (min-width: 1024px) {
+    .toggle {
+        display: none;
+    }
 }
