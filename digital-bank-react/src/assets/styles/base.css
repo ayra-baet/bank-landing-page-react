@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Public+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
+html, body {
+    overflow-x: hidden;
+}
+
 html {
     font-size: 100%;
     box-sizing: border-box;
@@ -12,20 +16,35 @@ html {
 body {
     margin: 0;
     padding: 0;
-    line-height: 1.3;
     font-family: "Public Sans", sans-serif;
-    font-size: 1.125rem;
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
     font-weight: var(--normal-300);
+    line-height: 1.5;
+    color: var(--gray-600);
 }
 
-header {
-    position: relative;
-    background-color: var(--white);
-    z-index: var(--header-200);
+h1, h2, h3 {
+    margin-top: 0;
+    color: var(--blue-950);
+    font-weight: var(--medium-400);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.31rem, 4vw, 3.25rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 2.5vw, 2.25rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
 a {
