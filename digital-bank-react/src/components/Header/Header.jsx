@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Backdrop from "../Backdrop/Backdrop";
 import MenuToggle from "./MenuToggle";
@@ -13,6 +13,21 @@ const links = ["Home", "About", "Contact", "Blog", "Careers"];
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        if(isOpen) {
+            document.documentElement.classList.add("scrolling-disabled");
+            document.body.classList.add("scrolling-disabled");
+        } else {
+            document.documentElement.classList.remove("scrolling-disabled");
+            document.body.classList.remove("scrolling-disabled");
+        }
+
+        return() => {
+            document.documentElement.classList.remove("scrolling-disabled");
+            document.body.classList.remove("scrolling-disabled");
+        }
+    }, [isOpen])
 
     return(
         <>
