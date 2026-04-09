@@ -37,6 +37,10 @@
     padding: 0 1.5rem 4rem;
 }
 
+.hero__content p {
+    margin-bottom: 1.25rem;
+}
+
 /* Tablet and up */
 @media (min-width: 768px) {
     .hero__mockup {
