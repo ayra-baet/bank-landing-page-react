@@ -1,13 +1,9 @@
-import Header from "./components/Header/Header";
-import HeroSection from "./components/HeroSection/HeroSection";
-import FeatureSection from "./components/FeatureSection/FeatureSection";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return(
     <>
-      <Header />
-      <HeroSection />
-      <FeatureSection />
+      <LandingPage />
     </>
   );
 }
