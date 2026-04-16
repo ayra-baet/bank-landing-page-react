@@ -1,7 +1,8 @@
 import Header from "../components/Header/Header";
 import HeroSection from "../components/HeroSection/HeroSection";
 import Section from "../components/Section/Section";
-import Features from "../components/Features/Features"
+import Features from "../components/Features/Features";
+import Articles from "../components/Articles/Articles";
 
 function LandingPage() {
     return(
@@ -16,6 +17,13 @@ function LandingPage() {
           your finances like never before."
             >
                 <Features />
+            </Section>
+
+            <Section
+                backgroundColor="section--gray-50"
+                title="Latest Articles"
+            >
+                <Articles />
             </Section>
         </>
     );
