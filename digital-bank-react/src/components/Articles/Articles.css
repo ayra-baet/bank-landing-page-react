@@ -1,0 +1,43 @@
+.article__card { 
+    background-color: var(--white);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.article__card-image {
+    height: 12.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.article__content {
+    padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+    color: var(--gray-600);
+}
+
+.article__content-author {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.article__content-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.article__card:hover .article__content-title {
+    color: var(--green-500);
+}
+
+.article__content-description {
+    font-size: 0.8125rem;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .article__content {
+        padding: 1.875rem 1.5625rem;
+    }
+}
