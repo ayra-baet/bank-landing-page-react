@@ -40,7 +40,7 @@ function Header() {
                     >
                         <img 
                             src={logoDark} 
-                            alt="Company logo"
+                            alt="Digitalbank logo"
                             className="nav__logo" 
                             />
                     </a>
