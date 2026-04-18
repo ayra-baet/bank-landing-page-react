@@ -6,7 +6,7 @@ function MobileMenu({ links, isOpen }) {
             <ul>
                 {links.map((link) => (
                     <li key={link}>
-                        <a href="#">{link}</a>
+                        <a href="/">{link}</a>
                     </li>
                 ))}
             </ul>

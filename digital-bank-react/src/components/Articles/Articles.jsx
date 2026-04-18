@@ -40,7 +40,7 @@ function Articles() {
     return(
         <>
             {articles.map(article => (
-                <a className="article__card" href="#" key={article.id}>
+                <a className="article__card" href="/" key={article.id}>
                     <div
                         className="article__card-image"
                         style={{backgroundImage: `url(${article.image})`}}
