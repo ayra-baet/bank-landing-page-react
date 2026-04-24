@@ -32,7 +32,7 @@ function Header() {
     return(
         <>
             <header className="header">
-                <nav className="container nav flex-between">
+                <nav className="container flex-between">
                     {/* logo */}
                     <a 
                         href="/"
