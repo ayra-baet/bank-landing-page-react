@@ -1,10 +1,10 @@
-header {
+.header {
     position: relative;
     background-color: var(--white);
     z-index: var(--header-200);
 }
 
-nav {
+.header nav {
     padding: 1.0625rem 1.5rem;
 }
 
