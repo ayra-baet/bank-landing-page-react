@@ -25,7 +25,7 @@ ul.nav__links {
 
 .nav__links li a {
     color: var(--gray-600);
-    font-size: 0.875rem;
+    font-size: var(--font-size-sm);
     font-weight: var(--medium-400);
     transition: color 0.3s ease;
     position: relative;
