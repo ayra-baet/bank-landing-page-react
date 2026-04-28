@@ -2,9 +2,14 @@ import "./Button.css";
 
 function Button({ variant }) {
     return(
-        <button className={`button button--${variant}`}>
+        <a
+            href="https://github.com/ayra-baet"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`button button--${variant}`}
+        >
             Request Invite
-        </button>
+        </a>
     );
 }
 
