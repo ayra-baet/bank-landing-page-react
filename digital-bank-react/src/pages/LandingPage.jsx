@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection/HeroSection";
 import Section from "../components/Section/Section";
 import Features from "../components/Features/Features";
 import Articles from "../components/Articles/Articles";
+import Footer from "../components/Footer/Footer";
 
 function LandingPage() {
     return(
@@ -25,6 +26,8 @@ function LandingPage() {
             >
                 <Articles />
             </Section>
+
+            <Footer />
         </>
     );
 }
