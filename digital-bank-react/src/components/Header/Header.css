@@ -40,7 +40,7 @@ ul.nav__links {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -28px;
+    bottom: -31px;
     height: 5px;
     background: var(--gradient-bg);
     opacity: 0;
