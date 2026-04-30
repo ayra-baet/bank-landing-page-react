@@ -27,7 +27,7 @@ ul.nav__links {
     color: var(--gray-600);
     font-size: var(--font-size-sm);
     font-weight: var(--medium-400);
-    transition: color 0.3s ease;
+    transition: color var(--transition-fast) ease;
     position: relative;
 }
 
@@ -44,7 +44,7 @@ ul.nav__links {
     height: 5px;
     background: var(--gradient-bg);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity var(--transition-fast) ease;
 }
 
 .nav__links li a:hover::before {
