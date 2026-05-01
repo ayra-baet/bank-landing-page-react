@@ -17,3 +17,7 @@
     opacity: 1;
     pointer-events: auto;
 }
+
+.backdrop--closing {
+    transition-delay: 50ms;
+}
