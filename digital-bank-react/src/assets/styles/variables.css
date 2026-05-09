@@ -29,6 +29,6 @@
     --header-200: 200;
     --backdrop-100: 100;
 
-    /* TRANSITIONS */
-    --transition-fast: 150ms
+    /* TIMING */
+    --transition-fast: 150ms;
 }
