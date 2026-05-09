@@ -41,6 +41,56 @@
     margin-bottom: 1.25rem;
 }
 
+/* Animation base state */
+.hero__content > * {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.hero__mockup {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: opacity var(--duration-normal) ease, transform var(--duration-normal) var(--easing-out);
+}
+
+/* Animation loaded state */
+.loaded .hero__content > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.loaded .hero__mockup {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Reduce motion preference: disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .hero__content > *,
+    .hero__mockup {
+        opacity: none !important;
+        transform: none !important;
+    }
+}
+
+/* Stagger */
+.loaded .hero__content h1 {
+    transition-delay: 0.1s;
+}
+
+.loaded .hero__content p {
+    transition-delay: 0.2s;
+}
+
+.loaded .hero__content .button--hero {
+    transition-delay: 0.3s;
+}
+
+.loaded .hero__mockup {
+    transition-delay: 0.4s;
+}
+
 /* Tablet and up */
 @media (min-width: 768px) {
     .hero__mockup {
@@ -87,6 +137,7 @@
         right: clamp(-120px, -8vw, -80px);
         bottom: clamp(-110px, -8vw, -80px);
         width: clamp(540px, 45vw, 700px);
+        transform: translateY(60px) scale(0.96);
     }
 }
 

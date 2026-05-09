@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "../Button/index";
 
 import mockup from "../../assets/images/image-mockups.png";
@@ -5,10 +6,12 @@ import mockup from "../../assets/images/image-mockups.png";
 import "./HeroSection.css";
 
 function HeroSection() {
+    const [imageLoaded, setImageLoaded] = useState(false);
+
     return(
         <section 
-            className="hero" 
-            aria-labelledby="hero__title"
+            className={`hero ${imageLoaded ? "loaded" : ""}`}
+            aria-labelledby="hero-title"
         >
             <div className="container hero__container">
 
@@ -19,7 +22,8 @@ function HeroSection() {
                     <img 
                         src={mockup}
                         alt="Mockup of a banking app on mobile phones"
-                        className="hero__mockup" 
+                        className="hero__mockup"
+                        onLoad={() => setImageLoaded(true)} 
                     />
                 </div>
 
