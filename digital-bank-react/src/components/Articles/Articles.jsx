@@ -41,9 +41,10 @@ function Articles() {
         <>
             {articles.map(article => (
                 <a className="article__card" href="/" key={article.id}>
-                    <div
+                    <img
+                        src={article.image}
+                        alt={article.title}
                         className="article__card-image"
-                        style={{backgroundImage: `url(${article.image})`}}
                     />
                     <div className="article__content">
                         <p className="article__content-author">{article.author}</p>
