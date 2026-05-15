@@ -2,6 +2,7 @@
     background-color: var(--white);
     border-radius: 5px;
     overflow: hidden;
+    cursor: default;
 }
 
 .article__card-image {

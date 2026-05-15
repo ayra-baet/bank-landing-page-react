@@ -40,7 +40,7 @@ function Articles() {
     return(
         <>
             {articles.map(article => (
-                <a className="article__card" href="/" key={article.id}>
+                <article className="article__card" key={article.id}>
                     <img
                         src={article.image}
                         alt={article.title}
@@ -51,7 +51,7 @@ function Articles() {
                         <h4 className="article__content-title">{article.title}</h4>
                         <p className="article__content-description">{article.description}</p>
                     </div>
-                </a>
+                </article>
             ))}
         </>
     );
