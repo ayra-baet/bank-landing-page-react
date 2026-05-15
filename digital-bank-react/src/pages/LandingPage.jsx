@@ -8,26 +8,37 @@ import Footer from "../components/Footer/Footer";
 function LandingPage() {
     return(
         <>
-            <Header />
-            <HeroSection />
+            <header id="home">
+                <Header />
+            </header>
 
-            <Section
-                backgroundColor="section--gray-100"
-                title="Why choose Digitalbank?"
-                description="We leverage Open Banking to turn your bank account into your financial hub. Control 
-          your finances like never before."
-            >
-                <Features />
-            </Section>
+            <main>
+                <HeroSection />
 
-            <Section
-                backgroundColor="section--gray-50"
-                title="Latest Articles"
-            >
-                <Articles />
-            </Section>
+                <section id="features">
+                    <Section
+                        backgroundColor="section--gray-100"
+                        title="Why choose Digitalbank?"
+                        description={`We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.`}
+                >
+                        <Features />
+                    </Section>
+                </section>
 
-            <Footer />
+                <section id="articles">
+                    <Section
+                        backgroundColor="section--gray-50"
+                        title="Latest Articles"
+                    >
+                        <Articles />
+                    </Section>
+                </section>
+            </main>
+
+            <footer id="footer">
+                <Footer />
+            </footer>
+            
         </>
     );
 }

@@ -3,13 +3,18 @@ import { useState, useEffect } from "react";
 import Backdrop from "../Backdrop/Backdrop";
 import MenuToggle from "./MenuToggle";
 import MobileMenu from "../MobileMenu/MobileMenu";
-import Button from "../Button/index";
+import Button from "../Button";
 
 import logoDark from "../../assets/images/logo-dark.svg";
 
 import "./Header.css";
 
-const links = ["Home", "About", "Contact", "Blog", "Careers"];
+const links = [
+    {label: "Home", href: "#home"},
+    {label: "About", href: "#features"},
+    {label: "Blog", href: "#articles"},
+    {label: "Contact", href: "#footer"}
+];
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +40,7 @@ function Header() {
                 <nav className="container flex-between">
                     {/* logo */}
                     <a 
-                        href="/"
+                        href="#home"
                         aria-label="Homepage"
                     >
                         <img 
@@ -54,8 +59,10 @@ function Header() {
                         className="nav__links"
                     >
                         {links.map(link => (
-                            <li key={link}>
-                                <a href="/">{link}</a>
+                            <li key={link.label}>
+                                <a href={link.href}>
+                                    {link.label}
+                                </a>
                             </li>
                         ))}
                     </ul>

@@ -25,6 +25,10 @@
     margin-right: 1rem;
 }
 
+.footer__social-links li a {
+    color: var(--white);
+}
+
 .footer__nav-links a, 
 .attribution a {
     color: var(--white);
@@ -57,8 +61,7 @@
 
     .footer__logo,
     .footer__social-links,
-    .footer__nav-links--right,
-    .button--footer {
+    .footer__nav-links--right {
         margin-bottom: 0;
     }
     .footer__logo {

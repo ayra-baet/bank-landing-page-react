@@ -5,8 +5,12 @@ function MobileMenu({ links, isOpen }) {
         <div className={`menu ${isOpen ? "menu--open": ""}`}>
             <ul>
                 {links.map((link) => (
-                    <li key={link}>
-                        <a href="/">{link}</a>
+                    <li key={link.label}>
+                        <a 
+                            href={link.href}
+                        >
+                            {link.label}
+                        </a>
                     </li>
                 ))}
             </ul>
