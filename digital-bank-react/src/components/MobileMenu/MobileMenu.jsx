@@ -1,6 +1,6 @@
 import "./MobileMenu.css";
 
-function MobileMenu({ links, isOpen }) {
+function MobileMenu({ links, isOpen, onClose }) {
     return(
         <div className={`menu ${isOpen ? "menu--open": ""}`}>
             <ul>
@@ -8,6 +8,7 @@ function MobileMenu({ links, isOpen }) {
                     <li key={link.label}>
                         <a 
                             href={link.href}
+                            onClick={onClose}
                         >
                             {link.label}
                         </a>

@@ -19,6 +19,14 @@ const links = [
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
+    function closeMenu() {
+        setIsOpen(false);
+    }
+
+    function toggleMenu() {
+        setIsOpen(prev => !prev);
+    }
+
     useEffect(() => {
         if(isOpen) {
             document.documentElement.classList.add("scrolling-disabled");
@@ -42,6 +50,7 @@ function Header() {
                     <a 
                         href="#home"
                         aria-label="Homepage"
+                        onClick={closeMenu}
                     >
                         <img 
                             src={logoDark} 
@@ -51,7 +60,10 @@ function Header() {
                     </a>
 
                     {/* Menu Toggle */}
-                    <MenuToggle isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
+                    <MenuToggle 
+                        isOpen={isOpen} 
+                        toggle={toggleMenu} 
+                    />
 
                     {/* navigation links */}
                     <ul
@@ -72,8 +84,16 @@ function Header() {
                 </nav>
             </header>
 
-            <MobileMenu links={links} isOpen={isOpen} />
-            <Backdrop isOpen={isOpen} onClose={() => setIsOpen(false)} />
+            <MobileMenu 
+                links={links} 
+                isOpen={isOpen} 
+                onClose={closeMenu} 
+            />
+
+            <Backdrop 
+                isOpen={isOpen} 
+                onClose={closeMenu} 
+            />
         </>
     );
 }
