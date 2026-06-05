@@ -19,7 +19,7 @@ function LandingPage() {
                     <Section
                         backgroundColor="section--gray-100"
                         title="Why choose Digitalbank?"
-                        description={`We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.`}
+                        description="We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before."
                 >
                         <Features />
                     </Section>
