@@ -1,6 +1,21 @@
+import { motion, useReducedMotion } from "framer-motion";
+
 import "./Section.css";
 
 function Section({ backgroundColor, title, description, children }) {
+    const shouldReduceMotion = useReducedMotion();
+
+    const containerVariants = {
+        hidden: {},
+        visible: {
+            transition: shouldReduceMotion
+            ? {}
+            : {
+                staggerChildren: 0.12
+            }
+        }
+    };
+
     return(
         <section 
             className={backgroundColor}
@@ -12,9 +27,15 @@ function Section({ backgroundColor, title, description, children }) {
                     {description && <p>{description}</p>}
                 </div>
 
-                <div className="section__grid">
+                <motion.div
+                    variants={containerVariants}
+                    initial={shouldReduceMotion ? false : "hidden"}
+                    whileInView={shouldReduceMotion ? undefined : "visible"}
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="section__grid"
+                >
                     {children}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

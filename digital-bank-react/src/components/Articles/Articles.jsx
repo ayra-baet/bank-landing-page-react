@@ -1,3 +1,5 @@
+import { motion, useReducedMotion } from "framer-motion";
+
 import imageCurrency from "../../assets/images/image-currency.jpg";
 import imageRestaurant from "../../assets/images/image-restaurant.jpg";
 import imagePlane from "../../assets/images/image-plane.jpg";
@@ -37,21 +39,43 @@ const articles = [
 ];
 
 function Articles() {
+    const shouldReduceMotion = useReducedMotion();
+
+    const cardVariants = {
+        hidden: {
+            opacity: shouldReduceMotion ? 1 : 0,
+            y: shouldReduceMotion ? 0: 30
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: shouldReduceMotion
+            ? { duration: 0 }
+            : {
+                duration: 0.5,
+                ease: "easeOut"
+            }
+        }
+    };
+
     return(
         <>
             {articles.map(article => (
-                <article className="article__card" key={article.id}>
-                    <img
-                        src={article.image}
-                        alt={article.title}
+                <motion.article
+                    variants={cardVariants}
+                    className="article__card" 
+                    key={article.id}
+                >
+                    <div
                         className="article__card-image"
+                        style={{ backgroundImage: `url(${article.image})`}}
                     />
                     <div className="article__content">
                         <p className="article__content-author">{article.author}</p>
                         <h4 className="article__content-title">{article.title}</h4>
                         <p className="article__content-description">{article.description}</p>
                     </div>
-                </article>
+                </motion.article>
             ))}
         </>
     );
